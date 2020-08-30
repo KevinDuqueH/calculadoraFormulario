@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validaciones</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+<div class="titulo">
+    <h2>Formulario BICTIA</h2> 
+</div>
 
-    <form class="formContac" onsubmit="validarFormulario(event)" action="">
+    <form class="formContact" onsubmit="validarFormulario(event)">
         <div class="camposForm">
             <label for="">Nombre</label>
             <input type="text" id="inputName">
-            <span class="mensajeAlerta" id="nombreNomre"></span>
+            <span class="mensajeAlerta" id="nombreMensaje"></span>
         </div>
         <div class="camposForm">
             <label for="">Apellido</label>
@@ -33,7 +37,7 @@
             <input type="number" id="inputName">
             <span class="mensajeAlerta" id="nombreCelular"></span>
         </div>
-        <input type="submit" value="Enviar">
+        <input id="inputEnviar" type="submit" value="Enviar">
     </form>
     
  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>     
