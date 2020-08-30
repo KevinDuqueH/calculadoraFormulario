@@ -1,4 +1,8 @@
 const inputName = document.getElementById("inputName")
+const inputApellido = document.getElementById("inputApellido")
+const inputPassword = document.getElementById("inputPassword")
+const inputEmail = document.getElementById("inputEmail")
+const inputCelular = document.getElementById("inputCelular")
 const nombreMensaje = document.getElementById("nombreMensaje")
 const nombreApellido = document.getElementById("nombreApellido")
 const nombrePassword = document.getElementById("nombrePassword")
@@ -13,33 +17,33 @@ function validarFormulario(event) {
     swal("Error!", "Por favor llene todos los campos!", "error");
        inputName.classList.add('alert');
        nombreMensaje.innerText = 'Llene este campo del nombre por favor'
-       inputName.placeholder = 'Pepito Perez'
+       inputName.placeholder = 'Su nombre aqui'
    }
-   if (inputName.value == "") {
+   if (inputApellido.value == "") {
     swal("Error!", "Por favor llene todos los campos!", "error");
-       inputName.classList.add('alert');
+       inputApellido.classList.add('alert');
        nombreApellido.innerText = 'Llene este campo del apellido por favor'
-       inputName.placeholder = 'Pepito Perez'
+       inputApellido.placeholder = 'Su apellido aqui'
    }
-   if (inputName.value == "") {
+   if (inputPassword.value == "") {
     swal("Error!", "Por favor llene todos los campos!", "error");
-       inputName.classList.add('alert');
+       inputPassword.classList.add('alert');
        nombrePassword.innerText = 'Llene este campo del password por favor'
-       inputName.placeholder = 'Pepito Perez'
+       inputPassword.placeholder = 'Su password aqui'
    }
-   if (inputName.value == "") {
+   if (inputEmail.value == "") {
     swal("Error!", "Por favor llene todos los campos!", "error");
-       inputName.classList.add('alert');
+       inputEmail.classList.add('alert');
        nombreCorreo.innerText = 'Llene este campo del correo por favor'
-       inputName.placeholder = 'Pepito Perez'
+       inputEmail.placeholder = 'Su correo aqui'
    }  
-   if (inputName.value == "") {
+   if (inputCelular.value == "") {
     swal("Error!", "Por favor llene todos los campos!", "error");
-       inputName.classList.add('alert');
+       inputCelular.classList.add('alert');
        nombreCelular.innerText = 'Llene este campo del celular por favor'
-       inputName.placeholder = 'Pepito Perez'
+       inputCelular.placeholder = 'Su celular aqui'
    }
-   if (inputName.value !== ""){
+   if (inputCelular.value !== ""){
     swal("Buen Trabajo!", "Bienvenido a la calculadora", "success");
     setTimeout (()=>{
         window.location ="./calculadora.html"
@@ -51,8 +55,38 @@ function validarFormulario(event) {
 /* Calculadora*/
 
 const promedio= document.getElementById("promedio"); // Llamamos el boton
+const suma= document.getElementById("suma"); // Llamamos el boton
+const resta= document.getElementById("resta"); // Llamamos el boton
+const division= document.getElementById("division"); // Llamamos el boton
 
 promedio.addEventListener("click", ()=>{
+    let num1= parseFloat(document.getElementById("num1").value); //Me trae y almacena el valor del input
+    let num2= parseFloat(document.getElementById("num2").value); //Me trae y almacena el valor del input
+    let num3= parseFloat(document.getElementById("num3").value); //Me trae y almacena el valor del input
+    let respuesta=  document.getElementById("respuesta");
+    let resultado= (num1 + num2 + num3)/3;
+    respuesta.innerHTML= "<i>" + resultado + "</i>";
+
+})
+suma.addEventListener("click", ()=>{
+    let num1= parseFloat(document.getElementById("num1").value); //Me trae y almacena el valor del input
+    let num2= parseFloat(document.getElementById("num2").value); //Me trae y almacena el valor del input
+    let num3= parseFloat(document.getElementById("num3").value); //Me trae y almacena el valor del input
+    let respuesta=  document.getElementById("respuesta");
+    let resultado= (num1 + num2 + num3);
+    respuesta.innerHTML= "<i>" + resultado + "</i>";
+
+})
+resta.addEventListener("click", ()=>{
+    let num1= parseFloat(document.getElementById("num1").value); //Me trae y almacena el valor del input
+    let num2= parseFloat(document.getElementById("num2").value); //Me trae y almacena el valor del input
+    let num3= parseFloat(document.getElementById("num3").value); //Me trae y almacena el valor del input
+    let respuesta=  document.getElementById("respuesta");
+    let resultado= (num1 + num2 + num3)/3;
+    respuesta.innerHTML= "<i>" + resultado + "</i>";
+
+})
+division.addEventListener("click", ()=>{
     let num1= parseFloat(document.getElementById("num1").value); //Me trae y almacena el valor del input
     let num2= parseFloat(document.getElementById("num2").value); //Me trae y almacena el valor del input
     let num3= parseFloat(document.getElementById("num3").value); //Me trae y almacena el valor del input
