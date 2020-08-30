@@ -82,7 +82,7 @@ resta.addEventListener("click", ()=>{
     let num2= parseFloat(document.getElementById("num2").value); //Me trae y almacena el valor del input
     let num3= parseFloat(document.getElementById("num3").value); //Me trae y almacena el valor del input
     let respuesta=  document.getElementById("respuesta");
-    let resultado= (num1 + num2 + num3)/3;
+    let resultado= (num1 - num2 - num3);
     respuesta.innerHTML= "<i>" + resultado + "</i>";
 
 })
@@ -91,7 +91,7 @@ division.addEventListener("click", ()=>{
     let num2= parseFloat(document.getElementById("num2").value); //Me trae y almacena el valor del input
     let num3= parseFloat(document.getElementById("num3").value); //Me trae y almacena el valor del input
     let respuesta=  document.getElementById("respuesta");
-    let resultado= (num1 + num2 + num3)/3;
+    let resultado= (num1 / num2 / num3);
     respuesta.innerHTML= "<i>" + resultado + "</i>";
 
 })

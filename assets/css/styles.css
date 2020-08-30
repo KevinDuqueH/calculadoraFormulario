@@ -63,6 +63,14 @@ div.camposForm > label {
 
 /* CALCULADORA */
 
+
+.tituloResultado{
+    display: flex;
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: center;
+}
 .calculadora{
     display: flex;
     margin: auto;
@@ -94,12 +102,19 @@ div.camposForm > label {
     font-size: 15px;
     margin: 0 5px 0 5px;
 }
-.resultado{
+.resultadoDiv{
+    background-color: gray;
     display: flex;
     margin: auto;
-    width: 40%;
+    width: 20%;
+    height: 30px;
+    border-radius: 10px;
     margin-top: 20px;
+    padding-top: 5px;
     justify-content: center;
+}
+.resultadoDiv > h3{
+    color: white;
 }
 
 /* CALCULADORA FIN */
